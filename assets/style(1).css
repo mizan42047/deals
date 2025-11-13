@@ -1,0 +1,29 @@
+/**
+Theme Name: Rooten Child
+Theme URI: https://bdthemes.com/products/wordpress-themes/
+Author: BdThemes
+Author URI: http://www.bdthemes.com
+Description: Rooten Child Theme designed by <a href="http://www.bdthemes.com" target="_blank">BdThemes</a> Ltd. For online documentation look at our <a href="http://docs.bdthemes.com/" target="_blank">documentation site</a>. For get support please go to our <a href="http://www.bdthemes.com/support/" target="_blank">support system</a>.
+Template: rooten
+Version: 1.0.0
+License: GPL v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: rooten
+Tags: one-column, two-columns, right-sidebar, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready, accessibility-ready
+*/
+
+
+.fs-popup-background {
+    background: -webkit-linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.8)) !important;
+    background: -o-linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.8)) !important;
+    background: -moz-linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.8)) !important;
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.8)) !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 100000000000000 !important;
+    overflow-y: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+}

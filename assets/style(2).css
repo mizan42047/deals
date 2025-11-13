@@ -1,0 +1,1296 @@
+/* Default Pricing Plan Styling */
+
+.bdt-pricing-plan {
+  --primary-gradient-color: #105cfa;
+  --primary-gradient-color-hover: #004be6;
+
+  --primary-solid-color: #105cfa;
+  --primary-solid-color-transparent: rgba(0, 102, 255, 0.1);
+}
+
+/* Element Pack Pricing Plan Styling */
+
+.bdt-pricing-plan.element-pack {
+  --primary-gradient-color: linear-gradient(313deg, #08aeec 0%, #20e2ad 100%);
+  --primary-gradient-color-hover: linear-gradient(120deg,
+      #08aeec 0%,
+      #20e2ad 100%);
+
+  --primary-solid-color: #20e2ad;
+  --primary-solid-color-transparent: rgba(32, 226, 173, 0.1);
+}
+
+/* Prime Slider Pricing Plan Styling */
+
+.bdt-pricing-plan.prime-slider {
+  --primary-gradient-color: linear-gradient(313deg, #fe506c 0%, #fc6a2a 100%);
+  --primary-gradient-color-hover: linear-gradient(120deg,
+      #fc6a2a 0%,
+      #fc6a2a 100%);
+
+  --primary-solid-color: #fc6a2a;
+  --primary-solid-color-transparent: rgba(252, 106, 42, 0.1);
+}
+
+/* ultimate post kit pricing plan styling */
+.bdt-pricing-plan.ultimate-post-kit {
+  --primary-gradient-color: linear-gradient(45deg, #08c972 0%, #60df54 100%);
+  --primary-gradient-color-hover: linear-gradient(45deg,
+      #60df54 0%,
+      #08c972 100%);
+
+  --primary-solid-color: #08c972;
+  --primary-solid-color-transparent: rgba(8, 201, 114, 0.1);
+}
+
+/* ultimate store kit pricing plan styling */
+
+.bdt-pricing-plan.ultimate-store-kit {
+  --primary-gradient-color: linear-gradient(313deg, #e62a3f 0%, #00216a 100%);
+  --primary-gradient-color-hover: linear-gradient(313deg,
+      #00216a 0%,
+      #e62a3f 100%);
+
+  --primary-solid-color: #e62a3f;
+  --primary-solid-color-transparent: rgba(230, 42, 63, 0.1);
+}
+
+/* pixel gallery pricing plan styling */
+
+.bdt-pricing-plan.pixel-gallery {
+  --primary-gradient-color: linear-gradient(313deg, #086698 0%, #0d3b54 100%);
+  --primary-gradient-color-hover: linear-gradient(120deg,
+      #0d3b54 0%,
+      #086698 100%);
+
+  --primary-solid-color: #086698;
+  --primary-solid-color-transparent: rgba(8, 102, 152, 0.1);
+}
+
+/* zoloblocks pricing plan styling */
+
+.bdt-pricing-plan.zoloblocks {
+  --primary-gradient-color: linear-gradient(240deg,
+      rgb(0, 102, 255) 39%,
+      rgb(59, 40, 204) 100%);
+  --primary-gradient-color-hover: linear-gradient(144deg,
+      #af40ff,
+      #5b42f3 50%,
+      #00ddeb);
+
+  --primary-solid-color: #0066ff;
+  --primary-solid-color-transparent: rgba(0, 102, 255, 0.1);
+}
+
+/* dark reader pricing plan styling */
+
+.bdt-pricing-plan.dark-reader {
+  --primary-gradient-color: #105cfa;
+  --primary-gradient-color-hover: #004be6;
+
+  --primary-solid-color: #105cfa;
+  --primary-solid-color-transparent: rgba(0, 102, 255, 0.1);
+}
+
+/* spin wheel pricing plan styling */
+
+.bdt-pricing-plan.spin-wheel {
+  --primary-gradient-color: linear-gradient(45deg, #b13fff, #39a9d1);
+  --primary-gradient-color-hover: linear-gradient(45deg, #39a9d1, #b13fff);
+
+  --primary-solid-color: #b13fff;
+  --primary-solid-color-transparent: rgba(177, 63, 255, 0.1);
+}
+
+/* sigma forms pricing plan styling */
+
+.bdt-pricing-plan.sigma-forms {
+  --primary-gradient-color: linear-gradient(160deg, #663de4 0%, #251854 70%);
+  --primary-gradient-color-hover: linear-gradient(160deg,
+      #251854 0%,
+      #663de4 70%);
+
+  --primary-solid-color: #663de4;
+  --primary-solid-color-transparent: rgba(102, 61, 228, 0.1);
+}
+
+/* launch guard pricing plan styling */
+
+.bdt-pricing-plan.launch-guard {
+  --primary-gradient-color: linear-gradient(160deg, #f89f1b 10%, #ec1c24 100%);
+  --primary-gradient-color-hover: linear-gradient(160deg,
+      #ec1c24 10%,
+      #f89f1b 100%);
+
+  --primary-solid-color: #ec1c24;
+  --primary-solid-color-transparent: rgba(236, 28, 36, 0.1);
+}
+
+/* smart admin assistant pricing plan styling */
+
+.bdt-pricing-plan.smart-admin-assistant {
+  --primary-gradient-color: #064fe7;
+  --primary-gradient-color-hover: #0349da;
+
+  --primary-solid-color: #064fe7;
+  --primary-solid-color-transparent: rgba(6, 79, 231, 0.1);
+}
+
+/* one accessibility pricing plan styling */
+
+.bdt-pricing-plan.one-accessibility {
+  --primary-gradient-color: linear-gradient(160deg, #2d75eb, #215faa);
+  --primary-gradient-color-hover: linear-gradient(160deg, #215faa, #2d75eb);
+
+  --primary-solid-color: #2d75eb;
+  --primary-solid-color-transparent: rgba(45, 117, 235, 0.1);
+}
+
+/* Pricing Plan Switcher */
+.bdt-pricing-plan .bdt-pricing-switcher {
+  text-align: center;
+  margin: 0 0 30px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.bdt-pricing-plan .bdt-pricing-switcher.bdt-visible {
+  opacity: 1;
+}
+
+.bdt-pricing-plan .bdt-pricing-switcher .bdt-subnav {
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e6;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  margin: 0;
+  position: relative;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.bdt-pricing-plan .bdt-pricing-switcher .bdt-subnav li {
+  padding-left: 0;
+  width: auto;
+}
+
+.bdt-pricing-plan .bdt-pricing-switcher .bdt-subnav li a {
+  padding: 10px 20px;
+  color: #000;
+  font-weight: 700;
+  text-transform: capitalize;
+  display: block;
+  font-size: 14px;
+}
+
+.bdt-pricing-plan .bdt-pricing-switcher .bdt-subnav-pill>*>a:hover {
+  background-color: transparent;
+}
+
+.bdt-pricing-plan .bdt-pricing-switcher .bdt-subnav-pill>.bdt-active>a {
+  color: #fff;
+  border-radius: 12px;
+  background: var(--primary-gradient-color);
+}
+
+.bdt-pricing-plan .bdt-subnav .bdt-switcher-tooltip {
+  position: absolute;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--primary-solid-color);
+  color: #fff;
+  border-radius: 8px;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.bdt-pricing-plan .bdt-subnav .bdt-switcher-tooltip::before {
+  content: "";
+  top: 100%;
+  opacity: 1;
+  z-index: 1;
+  height: 6px;
+  width: 13px;
+  margin-top: -1px;
+  position: absolute;
+  background-size: auto;
+  background: var(--primary-solid-color);
+  clip-path: polygon(100% 0, 25% 100%, 0 0);
+}
+
+/* tooltip badge positions right  */
+
+.bdt-pricing-plan .bdt-tooltip-top-right {
+  top: -12px;
+  right: -110px;
+}
+
+.bdt-pricing-plan .bdt-subnav .bdt-tooltip-top-right::before {
+  left: -7px;
+  transform: rotate(45deg);
+  top: 16px;
+  border-radius: 10px;
+  height: 20px;
+  width: 22px;
+}
+
+/* tooltip badge positions left  */
+.bdt-pricing-plan .bdt-tooltip-top-left {
+  top: -44px;
+  left: -5px;
+}
+
+.bdt-pricing-plan .bdt-subnav .bdt-tooltip-top-left::before {
+  right: 9px;
+}
+
+/* tooltip badge positions center */
+.bdt-pricing-plan .bdt-tooltip-top-center {
+  top: -44px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bdt-pricing-plan .bdt-subnav .bdt-tooltip-top-center::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Pricing Grid */
+.bdt-pricing-plan .bdt-pricing-grid-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-height: auto;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.bdt-pricing-plan .bdt-pricing-grid-wrap.bdt-visible {
+  opacity: 1;
+}
+
+.bdt-pricing-plan .bdt-price-item {
+  flex-grow: 1;
+  flex-basis: 300px;
+  border-radius: 36px;
+  position: relative;
+  /* height: 100%; */
+  background: #fff;
+  padding: 30px;
+  max-width: 450px;
+  width: 100%;
+  box-sizing: border-box;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.bdt-price-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.bdt-pricing-plan .discount-wrap-inner {
+  color: var(--primary-solid-color);
+  font-size: clamp(10px, 0.8vw, 12px);
+  font-weight: 700;
+  background-color: var(--primary-solid-color-transparent);
+  /* border: 1px solid var(--primary-solid-color); */
+  padding: clamp(10px, 0.6vw, 12px) clamp(10px, 0.8vw, 12px);
+  display: none;
+  text-transform: uppercase;
+  border-radius: 30px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.bdt-pricing-plan .discount-wrap-inner.coupon-applied {
+  display: inline-block;
+}
+
+/* Price Header */
+.bdt-pricing-plan .bdt-price-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.bdt-pricing-plan .bdt-price-subtitle {
+  font-size: clamp(13px, 1vw, 14px);
+  color: #72767f;
+  margin: 12px 0 0;
+  font-weight: 400;
+}
+
+.bdt-pricing-plan .bdt-price-wrap {
+  display: flex;
+  align-items: center;
+  grid-gap: 8px;
+  margin-top: 30px;
+}
+
+
+/* If you want to keep the transform, apply it to a pseudo-element or a child span, not the text itself. Example: */
+
+
+.bdt-pricing-plan .bdt-price-inner {
+  display: flex;
+  align-items: center;
+}
+
+.bdt-pricing-plan .bdt-discount-price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #767a7f;
+  text-decoration: line-through;
+}
+
+.bdt-pricing-plan .bdt-static-combo-wrap .bdt-discount-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2f2e34;
+  text-decoration: unset;
+}
+
+.bdt-pricing-plan .bdt-discount-price.coupon-applied {
+  display: inline-block;
+}
+
+.bdt-pricing-plan .bdt-current-price {
+  font-size: 35px;
+  font-weight: 900;
+  color: #000;
+  line-height: 1;
+}
+
+.bdt-pricing-plan .bdt-price-time {
+  font-size: 14px;
+  font-weight: 500;
+  color: #747283;
+}
+
+/* Feature List */
+.bdt-pricing-plan .bdt-pricing-list-wrap,
+.bdt-pricing-plan .bdt-list-group {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 0;
+  list-style: none;
+}
+
+.bdt-pricing-plan .bdt-list-group {
+  margin-bottom: 20px;
+}
+
+.bdt-pricing-plan .bdt-list-group:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.bdt-pricing-plan .bdt-pricing-list-item-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #021343;
+  margin-bottom: 3px;
+}
+
+.bdt-pricing-plan .has-toggle-button {
+  .bdt-tooltiptext {
+    display: none;
+  }
+}
+
+.bdt-pricing-plan .expanded-container {
+  .bdt-tooltiptext {
+    display: block;
+  }
+
+  .expanded {
+    overflow: visible !important;
+  }
+}
+
+.bdt-pricing-plan .plan-feature-container {
+  position: relative;
+  padding-bottom: 0;
+  /* No padding by default */
+  margin-top: 30px;
+}
+
+.bdt-pricing-plan .bdt-pricing-list-wrap.limited {
+  max-height: 200px;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  position: relative;
+  --pricing-table-mask-shadow: 30%;
+  mask-image: linear-gradient(#000 var(--pricing-table-mask-shadow),
+      transparent);
+}
+
+.bdt-pricing-plan .bdt-pricing-list-wrap.limited.active {
+  max-height: 1000px;
+  mask-image: none;
+}
+
+.bdt-pricing-plan .bdt-pricing-list-item {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-left: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #676c7a;
+}
+
+.bdt-pricing-plan .bdt-pricing-list-item strong {
+  color: #5a5c62;
+}
+
+.bdt-pricing-plan .bdt-pricing-list-item.cross-item {
+  color: #899298;
+}
+
+.bdt-pricing-plan .bdt-pricing-list-item>* {
+  text-align: left;
+}
+
+.bdt-pricing-plan .bdt-pricing-list-item-icon {
+  --borderWidth: 2px;
+  --height: 10px;
+  --width: 7px;
+  --borderColor: currentColor;
+  display: inline-block;
+  transform: rotate(45deg);
+  height: var(--height);
+  width: var(--width);
+  border-bottom: var(--borderWidth) solid var(--borderColor);
+  border-right: var(--borderWidth) solid var(--borderColor);
+}
+
+.bdt-pricing-plan .bdt-pricing-list-item .bdt-pricing-list-item-tooltip {
+  color: currentColor;
+  font-weight: 400;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Toggle Button */
+.bdt-pricing-plan .toggle-button {
+  margin: 0;
+  cursor: pointer;
+  display: none;
+  /* Hide by default on desktop */
+  background: transparent;
+  border: 0;
+  color: #1c64f2;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+/* Toggle Button when expanded (after show more click) */
+
+.bdt-pricing-plan .toggle-button:hover {
+  color: #0f3cc9;
+}
+
+.bdt-pricing-plan .toggle-button span {
+  font-size: 14px;
+}
+
+/* Tooltip */
+.bdt-pricing-plan .bdt-pricing-list-item-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.bdt-pricing-plan .bdt-pricing-list-item-tooltip .bdt-tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  font-size: 12px;
+  transform: translateX(-50%);
+}
+
+.bdt-pricing-plan .bdt-pricing-list-item-tooltip .bdt-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.bdt-pricing-plan .bdt-pricing-list-item-tooltip:hover .bdt-tooltiptext {
+  visibility: visible;
+}
+
+/* Buy Button */
+
+.bdt-price-button-wrap {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.bdt-save-price {
+  font-size: 16px;
+  color: #283449;
+  font-weight: 400;
+  margin-top: 10px;
+  display: block;
+}
+
+.bdt-pricing-plan .bdt-price-buyButton {
+  text-decoration: none;
+  color: var(--primary-solid-color);
+  padding: 15px;
+  font-size: 14px;
+  display: block;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: color 0.3s ease, background 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  border: 2px solid var(--primary-solid-color);
+  text-align: center;
+}
+
+.bdt-pricing-plan .bdt-price-buyButton:hover {
+  color: #fff;
+  text-decoration: none;
+  border-color: var(--primary-solid-color);
+  background: var(--primary-gradient-color);
+}
+
+/* Body Wrapper */
+.bdt-price-body-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+/* static combo item ordering */
+
+.bdt-pricing-plan .static-item-right .bdt-price-item.bdt-static-price-combo {
+  order: 999;
+}
+
+.bdt-pricing-plan .static-item-left .bdt-price-item.bdt-static-price-combo {
+  order: -1;
+}
+
+/* Static Combo & Plan Highlight Items */
+
+.bdt-pricing-plan .bdt-static-price-combo,
+.bdt-pricing-plan .bdt-highlighted {
+  box-shadow: 0 0 0px 4px var(--primary-solid-color) inset;
+}
+
+.bdt-pricing-plan .bdt-static-price-combo .bdt-price-buyButton,
+.bdt-pricing-plan .bdt-highlighted .bdt-price-buyButton {
+  background: var(--primary-gradient-color);
+  color: #fff;
+  border: 0 !important;
+}
+
+.bdt-pricing-plan .bdt-static-price-combo .bdt-price-buyButton:hover,
+.bdt-pricing-plan .bdt-highlighted .bdt-price-buyButton:hover {
+  background: var(--primary-gradient-color-hover);
+}
+
+/* list badge start */
+.bdt-price-item .bdt-list-badge {
+  background: #f00;
+  line-height: 1;
+  color: #fff;
+  padding: 5px;
+  border-radius: 30px;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.bdt-price-item .bdt-list-badge.success {
+  background: rgba(34, 197, 94, 0.2);
+  color: #15803d;
+}
+
+.bdt-price-item .bdt-list-badge.danger {
+  background: rgba(239, 68, 68, 0.2);
+  color: #b91c1c;
+}
+
+.bdt-price-item .bdt-list-badge.warning {
+  background: rgba(251, 191, 36, 0.2);
+  color: #b45309;
+}
+
+.bdt-price-item .bdt-list-badge.info {
+  background: rgba(59, 130, 246, 0.2);
+  color: #1d4ed8;
+}
+
+.bdt-price-item .bdt-list-badge.primary {
+  background: rgba(99, 102, 241, 0.2);
+  color: #4338ca;
+}
+
+.bdt-price-item .bdt-list-badge.secondary {
+  background: rgba(156, 163, 175, 0.2);
+  color: #6b7280;
+}
+
+/* static combo badge style  */
+
+.bdt-static-combo-wrap .bdt-price-item .bdt-list-badge {
+  color: #f5670e;
+}
+
+.bdt-static-combo-wrap .bdt-price-item .bdt-list-badge.success {
+  background: #fff;
+}
+
+.bdt-static-combo-wrap .bdt-price-item .bdt-list-badge.danger {
+  background: rgba(239, 68, 68, 0.975);
+}
+
+.bdt-static-combo-wrap .bdt-price-item .bdt-list-badge.warning {
+  background: rgba(251, 191, 36, 0.975);
+}
+
+.bdt-static-combo-wrap .bdt-price-item .bdt-list-badge.info {
+  background: rgba(11, 51, 255, 0.975);
+}
+
+.bdt-static-combo-wrap .bdt-price-item .bdt-list-badge.primary {
+  background: rgba(3, 8, 254, 0.975);
+}
+
+.bdt-static-combo-wrap .bdt-price-item .bdt-list-badge.secondary {
+  background: rgba(51, 60, 75, 0.975);
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .bdt-pricing-plan .bdt-pricing-list-wrap {
+    max-height: 150px;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(#000 75%, transparent);
+  }
+
+  .bdt-pricing-plan .plan-feature-container {
+    padding-bottom: 36px;
+    /* Always space for toggle button on mobile */
+  }
+
+  .bdt-pricing-plan .toggle-button {
+    display: block !important;
+    /* Force show on mobile */
+  }
+}
+
+@media (min-width: 768px) {
+  .bdt-pricing-plan .bdt-pricing-switcher .bdt-subnav li {
+    width: auto;
+  }
+
+  .bdt-pricing-plan .toggle-button {
+    display: none !important;
+    /* Hide toggle button on desktop */
+  }
+
+  /* Reset features list height restrictions for tablet and desktop */
+  .bdt-pricing-plan .bdt-pricing-list-wrap {
+    max-height: none !important;
+    overflow: visible !important;
+    mask-image: none !important;
+  }
+
+  .bdt-pricing-plan .plan-feature-container {
+    padding-bottom: 0;
+    /* Remove extra padding for toggle button */
+  }
+
+  /* Override has-toggle-button restrictions on tablet and desktop */
+  .bdt-pricing-plan .has-toggle-button .bdt-pricing-list-wrap {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Special override for static combo items */
+  .bdt-pricing-plan .bdt-static-price-combo .bdt-pricing-list-wrap,
+  .bdt-pricing-plan .bdt-static-combo-wrap .bdt-pricing-list-wrap {
+    max-height: none !important;
+    overflow: visible !important;
+    mask-image: none !important;
+  }
+
+  .bdt-pricing-plan .bdt-static-price-combo .has-toggle-button .bdt-pricing-list-wrap {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bdt-pricing-plan .bdt-pricing-grid-wrap {
+    flex-wrap: nowrap;
+  }
+
+  .bdt-pricing-plan .bdt-pricing-switcher .bdt-subnav li a {
+    padding: 12px 30px;
+  }
+
+  .bdt-pricing-plan .bdt-price-title {
+    font-size: 24px;
+  }
+
+  .bdt-pricing-plan .bdt-current-price {
+    font-size: 36px;
+  }
+
+  .bdt-pricing-plan .bdt-pricing-list-item .bdt-pricing-list-item-tooltip {
+    font-size: 14px;
+  }
+
+}
+
+/* Countdown Timer Styling */
+.bdt-countdown-wrap {
+  margin-top: 30px;
+  position: relative;
+}
+
+.bdt-countdown-inner {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bdt-countdown-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  border-radius: inherit;
+  background: var(--primary-gradient-color);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.bdt-countdown-title {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: #293035;
+  background: #fff;
+  padding: 0 5px;
+  border-radius: 12px;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bdt-countdown-timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.bdt-countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.bdt-countdown-time {
+  font-size: 24px;
+  font-weight: 900;
+  color: #293035;
+  line-height: 1;
+  text-align: center;
+}
+
+.bdt-countdown-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: capitalize;
+}
+
+.bdt-countdown-separator {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 0 5px;
+}
+
+.bdt-countdown-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #9ca3af;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Responsive Design for Countdown */
+@media (max-width: 768px) {
+  .bdt-countdown-inner {
+    padding: 20px 15px;
+  }
+
+  .bdt-countdown-timer {
+    gap: 10px;
+  }
+
+  .bdt-countdown-time {
+    font-size: 24px;
+    min-width: 35px;
+  }
+
+  .bdt-countdown-label {
+    font-size: 12px;
+  }
+
+  .bdt-countdown-separator {
+    margin: 0 3px;
+  }
+
+  .bdt-countdown-dot {
+    width: 4px;
+    height: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bdt-countdown-timer {
+    gap: 8px;
+  }
+
+  .bdt-countdown-time {
+    font-size: 20px;
+    min-width: 30px;
+  }
+
+  .bdt-countdown-label {
+    font-size: 11px;
+  }
+}
+
+/* static combo item style horizontal */
+.bdt-static-combo-wrap {
+  margin-top: 30px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.bdt-static-combo-wrap.bdt-visible {
+  opacity: 1;
+}
+
+.bdt-static-combo-wrap {
+  .bdt-static-price-combo {
+    display: flex;
+    justify-content: space-between;
+    padding: clamp(20px, 4vw, 40px) !important;
+    flex-direction: column;
+    position: relative;
+    border-radius: 36px;
+    background: var(--primary-gradient-color);
+    align-items: center;
+    max-width: 100% !important;
+    gap: 20px;
+    box-shadow: none;
+
+    .bdt-price-header-wrap {
+      background: #ffffff;
+      height: auto;
+      border-radius: 30px;
+      width: 100%;
+    }
+
+    .bdt-price-title {
+      font-size: 22px !important;
+      color: #fff;
+    }
+
+    .bdt-price-subtitle {
+      font-size: 14px;
+      color: #e1e6f3;
+      font-weight: 400;
+      margin: 10px 0 0;
+    }
+
+    .bdt-price-body-wrap {
+      background: transparent;
+      text-align: left;
+      padding: 0 !important;
+      display: block;
+      width: 100%;
+    }
+
+    .bdt-pricing-list-item {
+      color: rgb(247, 247, 247);
+    }
+
+    .toggle-button {
+      color: rgb(255 255 255);
+      font-weight: 600;
+      left: 0;
+      transform: unset;
+      margin-top: 15px;
+    }
+
+    .bdt-price-wrap .bdt-current-price {
+      color: var(--primary-solid-color);
+    }
+
+
+    .bdt-price-wrap {
+      justify-content: center;
+    }
+
+    span.bdt-save-price {
+      margin: 0;
+    }
+
+    .bdt-price-header-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: unset;
+      padding: clamp(20px, 2vw, 30px);
+      min-width: auto;
+      text-align: center;
+    }
+
+    .bdt-current-price {
+      font-size: 36px;
+    }
+
+    .bdt-price-inner {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .bdt-list-group {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    .bdt-pricing-list-item-title {
+      grid-column: 1 / -1;
+      font-weight: bold;
+      font-size: 16px;
+      color: #f7f9fc;
+    }
+
+    .bdt-pricing-list-item strong {
+      color: #fefefe;
+    }
+
+    .has-toggle-button {
+      .bdt-pricing-list-wrap {
+        max-height: 260px !important;
+        overflow: hidden;
+      }
+    }
+
+    .expanded-container {
+      .bdt-pricing-list-wrap {
+        max-height: unset !important;
+        overflow: unset !important;
+      }
+    }
+
+    .plan-feature-container {
+      padding-bottom: 30px;
+      margin-top: clamp(20px, 2vw, 30px);
+    }
+
+    .bdt-price-footer-wrap {
+      margin-top: 30px;
+    }
+
+    /* Tablet Responsive */
+    @media (min-width: 768px) {
+
+      .bdt-price-header-wrap {
+        min-width: 280px;
+      }
+
+      .bdt-current-price {
+        font-size: 40px;
+      }
+
+      .bdt-countdown-title {
+        font-size: 14px;
+      }
+
+      .bdt-list-group {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Desktop Responsive */
+    @media (min-width: 1024px) {
+      flex-direction: row-reverse;
+
+      .bdt-price-header-wrap {
+        max-width: 400px;
+      }
+
+      .bdt-countdown-title {
+        font-size: 16px;
+      }
+
+      .bdt-price-title {
+        font-size: 32px !important;
+      }
+
+      .bdt-current-price {
+        font-size: 46px;
+      }
+
+      .bdt-pricing-list-wrap {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .bdt-price-inner {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+      }
+
+      .bdt-price-time-wrap {
+        .bdt-price-time {
+          font-size: 13px;
+          letter-spacing: 1.5px;
+        }
+      }
+
+      .plan-feature-container {
+        padding-bottom: 0;
+      }
+
+      /* Reset features list height restrictions for static combo on tablet */
+      .bdt-pricing-list-wrap {
+        max-height: none !important;
+        overflow: visible !important;
+        mask-image: none !important;
+      }
+
+      .has-toggle-button .bdt-pricing-list-wrap {
+        max-height: none !important;
+        overflow: visible !important;
+      }
+    }
+  }
+}
+
+/* Footer Content */
+
+.bdt-pricing-plan .bdt-static-combo-wrap .after-text span {
+  display: inline-block;
+  transform: translateY(-15px) rotate(345deg);
+}
+
+
+.bdt-pricing-plan .bdt-static-combo-wrap .bdt-price-discount-badge {
+  font-size: 14px;
+  background: var(--primary-solid-color-transparent);
+  padding: 4px 8px;
+  border-radius: 30px;
+  color: #000000;
+  line-height: 1;
+  text-transform: capitalize;
+  font-family: cursive;
+}
+
+.bdt-pricing-plan .bdt-static-combo-wrap .bdt-text-footer {
+  margin: 0;
+  font-size: clamp(16px, 1.2vw, 18px);
+  color: rgb(237, 237, 237);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.bdt-pricing-plan .bdt-static-combo-wrap .bdt-text-footer strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.bdt-pricing-plan .bdt-static-combo-wrap .bdt-text-footer a {
+  font-weight: 700;
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+  color: #fff;
+}
+
+.bdt-pricing-plan .bdt-static-combo-wrap .bdt-text-footer a:hover {
+  color: #f8f8f8;
+}
+
+.bdt-pricing-plan .bdt-static-combo-wrap .bdt-text-footer.refund-gurantee-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.bdt-pricing-plan .bdt-static-combo-wrap .bdt-refund-img-wrap {
+  margin: 25px auto 0;
+}
+
+.bdt-pricing-plan .bdt-static-combo-wrap .bdt-refund-img-wrap img {
+  width: 130px;
+  height: auto;
+  vertical-align: middle;
+}
+
+
+.bdt-pricing-plan .bdt-static-combo-wrap .after-text {
+  position: relative;
+}
+
+.bdt-pricing-plan .bdt-static-combo-wrap .after-text svg {
+  position: absolute;
+  left: -7px;
+  bottom: 2px;
+}
+
+/* // toogle button styles */
+
+.bdt-static-combo-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.bdt-static-combo-toggle-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.bdt-static-combo-toggle-container .bdt-toggle-label {
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bdt-static-combo-toggle-container .bdt-toggle-label.bdt-toggle-lifetime {
+  color: #000;
+}
+
+.bdt-static-combo-toggle-container .bdt-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.bdt-static-combo-toggle-container .bdt-toggle-switch input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.bdt-static-combo-toggle-container .bdt-toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary-gradient-color);
+  border-radius: 20px;
+  transition: 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bdt-static-combo-toggle-container .bdt-toggle-knob {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 7px;
+  bottom: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+  transform: translateX(16px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.bdt-pricing-plan .bdt-static-combo-wrap .bdt-price-buyButton {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.bdt-pricing-plan .bdt-static-combo-wrap .bdt-body-footer-content {
+  margin-top: 20px;
+}
+
+@media (min-width: 1024px) {
+  .bdt-pricing-plan .bdt-static-combo-wrap .bdt-body-footer-content {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bdt-pricing-plan .bdt-static-combo-wrap .bdt-body-footer-content {
+    margin-top: 20px;
+  }
+}
