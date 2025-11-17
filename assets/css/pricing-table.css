@@ -312,209 +312,199 @@
   opacity: 1;
 }
 
-.bdt-static-combo-wrap {
-  .bdt-static-price-combo {
-    display: flex;
-    justify-content: space-between;
-    padding: clamp(20px, 4vw, 40px) !important;
-    flex-direction: column;
-    position: relative;
-    border-radius: 36px;
-    background: var(--primary-gradient-color);
-    align-items: center;
-    max-width: 100% !important;
-    gap: 20px;
-    box-shadow: none;
+.bdt-static-combo-wrap .bdt-static-price-combo {
+  display: flex;
+  justify-content: space-between;
+  padding: clamp(20px, 4vw, 40px) !important;
+  flex-direction: column;
+  position: relative;
+  border-radius: 36px;
+  background: var(--primary-gradient-color);
+  align-items: center;
+  max-width: 100% !important;
+  gap: 20px;
+  box-shadow: none;
+}
 
-    .bdt-price-header-wrap {
-      background: #ffffff;
-      height: auto;
-      border-radius: 30px;
-      width: 100%;
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .bdt-price-header-wrap {
+  background: #fff;
+  height: auto;
+  border-radius: 30px;
+  width: 100%;
+}
 
-    .bdt-price-title {
-      font-size: 22px !important;
-      color: #fff;
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .bdt-price-title {
+  font-size: 22px !important;
+  color: #fff;
+}
 
-    .bdt-price-subtitle {
-      font-size: 14px;
-      color: #e1e6f3;
-      font-weight: 400;
-      margin: 10px 0 0;
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .bdt-price-subtitle {
+  font-size: 14px;
+  color: #e1e6f3;
+  font-weight: 400;
+  margin: 10px 0 0;
+}
 
-    .bdt-price-body-wrap {
-      background: transparent;
-      text-align: left;
-      padding: 0 !important;
-      display: block;
-      width: 100%;
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .bdt-price-body-wrap {
+  background: transparent;
+  text-align: left;
+  padding: 0 !important;
+  display: block;
+  width: 100%;
+}
 
-    .bdt-pricing-list-item {
-      color: rgb(247, 247, 247);
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .bdt-pricing-list-item {
+  color: #f7f7f7;
+}
 
-    .toggle-button {
-      color: rgb(255 255 255);
-      font-weight: 600;
-      left: 0;
-      transform: unset;
-      margin-top: 15px;
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .toggle-button {
+  color: #000;
+  font-weight: 600;
+  left: 0;
+  transform: unset;
+  margin-top: 15px;
+}
 
-    .bdt-price-wrap .bdt-current-price {
-      color: var(--primary-solid-color);
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .bdt-price-wrap .bdt-current-price {
+  color: var(--primary-solid-color);
+}
 
+.bdt-static-combo-wrap .bdt-static-price-combo .bdt-price-wrap {
+  justify-content: center;
+}
 
-    .bdt-price-wrap {
-      justify-content: center;
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo span.bdt-save-price {
+  margin: 0;
+}
 
-    span.bdt-save-price {
-      margin: 0;
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .bdt-price-header-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: unset;
+  padding: clamp(20px, 2vw, 30px);
+  min-width: auto;
+  text-align: center;
+}
 
-    .bdt-price-header-wrap {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      overflow: unset;
-      padding: clamp(20px, 2vw, 30px);
-      min-width: auto;
-      text-align: center;
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .bdt-current-price {
+  font-size: 36px;
+}
 
-    .bdt-current-price {
-      font-size: 36px;
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .bdt-price-inner {
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
 
-    .bdt-price-inner {
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .bdt-list-group {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
 
-    .bdt-list-group {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      gap: 10px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      width: 100%;
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .bdt-pricing-list-item-title {
+  grid-column: -1;
+  font-weight: bold;
+  font-size: 16px;
+  color: #f7f9fc;
+}
 
-    .bdt-pricing-list-item-title {
-      grid-column: 1 / -1;
-      font-weight: bold;
-      font-size: 16px;
-      color: #f7f9fc;
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .bdt-pricing-list-item strong {
+  color: #fefefe;
+}
 
-    .bdt-pricing-list-item strong {
-      color: #fefefe;
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .has-toggle-button .bdt-pricing-list-wrap {
+  max-height: 260px !important;
+  overflow: hidden;
+}
 
-    .has-toggle-button {
-      .bdt-pricing-list-wrap {
-        max-height: 260px !important;
-        overflow: hidden;
-      }
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .expanded-container .bdt-pricing-list-wrap {
+  max-height: unset !important;
+  overflow: unset !important;
+}
 
-    .expanded-container {
-      .bdt-pricing-list-wrap {
-        max-height: unset !important;
-        overflow: unset !important;
-      }
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .plan-feature-container {
+  padding-bottom: 30px;
+  margin-top: clamp(20px, 2vw, 30px);
+}
 
-    .plan-feature-container {
-      padding-bottom: 30px;
-      margin-top: clamp(20px, 2vw, 30px);
-    }
+.bdt-static-combo-wrap .bdt-static-price-combo .bdt-price-footer-wrap {
+  margin-top: 30px;
+}
 
-    .bdt-price-footer-wrap {
-      margin-top: 30px;
-    }
+@media (min-width: 768px) {
+  .bdt-static-combo-wrap .bdt-static-price-combo .bdt-price-header-wrap {
+    min-width: 280px;
+  }
 
-    /* Tablet Responsive */
-    @media (min-width: 768px) {
+  .bdt-static-combo-wrap .bdt-static-price-combo .bdt-current-price {
+    font-size: 40px;
+  }
 
-      .bdt-price-header-wrap {
-        min-width: 280px;
-      }
+  .bdt-static-combo-wrap .bdt-static-price-combo .bdt-countdown-title {
+    font-size: 14px;
+  }
 
-      .bdt-current-price {
-        font-size: 40px;
-      }
+  .bdt-static-combo-wrap .bdt-static-price-combo .bdt-list-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-      .bdt-countdown-title {
-        font-size: 14px;
-      }
+@media (min-width: 1024px) {
+  .bdt-static-combo-wrap .bdt-static-price-combo {
+    flex-direction: row-reverse;
+    /* Reset features list height restrictions for static combo on tablet */
+  }
 
-      .bdt-list-group {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+  .bdt-static-combo-wrap .bdt-static-price-combo .bdt-price-header-wrap {
+    max-width: 400px;
+  }
 
-    /* Desktop Responsive */
-    @media (min-width: 1024px) {
-      flex-direction: row-reverse;
+  .bdt-static-combo-wrap .bdt-static-price-combo .bdt-countdown-title {
+    font-size: 16px;
+  }
 
-      .bdt-price-header-wrap {
-        max-width: 400px;
-      }
+  .bdt-static-combo-wrap .bdt-static-price-combo .bdt-price-title {
+    font-size: 32px !important;
+  }
 
-      .bdt-countdown-title {
-        font-size: 16px;
-      }
+  .bdt-static-combo-wrap .bdt-static-price-combo .bdt-current-price {
+    font-size: 46px;
+  }
 
-      .bdt-price-title {
-        font-size: 32px !important;
-      }
+  .bdt-static-combo-wrap .bdt-static-price-combo .bdt-pricing-list-wrap {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
 
-      .bdt-current-price {
-        font-size: 46px;
-      }
+  .bdt-static-combo-wrap .bdt-static-price-combo .bdt-price-inner {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
 
-      .bdt-pricing-list-wrap {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-      }
+  .bdt-static-combo-wrap .bdt-static-price-combo .bdt-price-time-wrap .bdt-price-time {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
 
-      .bdt-price-inner {
-        flex-direction: row-reverse;
-        align-items: flex-start;
-      }
+  .bdt-static-combo-wrap .bdt-static-price-combo .plan-feature-container {
+    padding-bottom: 0;
+  }
 
-      .bdt-price-time-wrap {
-        .bdt-price-time {
-          font-size: 13px;
-          letter-spacing: 1.5px;
-        }
-      }
+  .bdt-static-combo-wrap .bdt-static-price-combo .bdt-pricing-list-wrap {
+    max-height: none !important;
+    overflow: visible !important;
+    mask-image: none !important;
+  }
 
-      .plan-feature-container {
-        padding-bottom: 0;
-      }
-
-      /* Reset features list height restrictions for static combo on tablet */
-      .bdt-pricing-list-wrap {
-        max-height: none !important;
-        overflow: visible !important;
-        mask-image: none !important;
-      }
-
-      .has-toggle-button .bdt-pricing-list-wrap {
-        max-height: none !important;
-        overflow: visible !important;
-      }
-    }
+  .bdt-static-combo-wrap .bdt-static-price-combo .has-toggle-button .bdt-pricing-list-wrap {
+    max-height: none !important;
+    overflow: visible !important;
   }
 }
 
