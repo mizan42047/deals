@@ -5467,39 +5467,6 @@
     <script type="text/javascript" src="./assets/js/pricing-plan.js" id="bdthemes-pricing-table-js" defer></script>
     <script type="text/javascript" src="./assets/js/helper.min.js" id="element-pack-helper-js" defer></script>
     <script type="text/javascript" src="./assets/js/ep-content-switcher.min.js" id="ep-content-switcher-js" defer></script>
-    <!-- Put just before </body> -->
-    <script src="https://cdn.jsdelivr.net/npm/fastdom@1.0.10/fastdom.min.js"></script>
-    <script>
-        // Monkey-patch the most common layout properties to go through FastDom
-        (function () {
-            const originalOffsetWidth = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'offsetWidth');
-            const originalOffsetHeight = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'offsetHeight');
-            const originalGetBoundingClientRect = HTMLElement.prototype.getBoundingClientRect;
-
-            delete HTMLElement.prototype.offsetWidth;
-            delete HTMLElement.prototype.offsetHeight;
-
-            Object.defineProperty(HTMLElement.prototype, 'offsetWidth', {
-                get: function () {
-                    let value;
-                    fastdom.measure(() => { value = originalOffsetWidth.get.call(this); });
-                    return value; // still synchronous for legacy code, but batched
-                }
-            });
-            Object.defineProperty(HTMLElement.prototype, 'offsetHeight', {
-                get: function () {
-                    let value;
-                    fastdom.measure(() => { value = originalOffsetHeight.get.call(this); });
-                    return value;
-                }
-            });
-            HTMLElement.prototype.getBoundingClientRect = function () {
-                let rect;
-                fastdom.measure(() => { rect = originalGetBoundingClientRect.call(this); });
-                return rect || { top: 0, left: 0, bottom: 0, right: 0, width: 0, height: 0 };
-            };
-        })();
-    </script>
     
     <script>
         const lazyloadRunObserver = () => {
@@ -5555,7 +5522,7 @@
                         target: document.body,
                     },
                 }
-
+                
                 for (const [key, value] of Object.entries(scriptsData)) {
                     const script = document.createElement('script');
                     script.src = value.src;
