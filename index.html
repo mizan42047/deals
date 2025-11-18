@@ -5531,7 +5531,9 @@
                     if (value.type) {
                         script.type = value.type;
                     }
-                    value.target.appendChild(script);
+                    setTimeout(() => {
+                        value.target.appendChild(script);
+                    }, 10000);
                 }
             })()
     </script>
