@@ -5,13 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Save Big with WordPress Black Friday Deals 2025 - BdThemes</title>
-    <!-- <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-MJJXVQC');
-    </script> -->
     <link rel="icon" href="https://bdthemes.com/wp-content/uploads/2021/09/cropped-bdthemes-favicon-512x512-1-32x32.png" sizes="32x32">
     <link rel="icon" href="https://bdthemes.com/wp-content/uploads/2021/09/cropped-bdthemes-favicon-512x512-1-192x192.png" sizes="192x192">
     <link rel="apple-touch-icon" href="https://bdthemes.com/wp-content/uploads/2021/09/cropped-bdthemes-favicon-512x512-1-180x180.png">
@@ -35,12 +28,6 @@
 
 <body
     class="wp-singular page-template page-template-elementor_canvas page page-id-121362 wp-custom-logo wp-embed-responsive wp-theme-rooten wp-child-theme-rooten-child translatepress-en_US chrome group-blog layout-default navbar-style1 header-mode-custom elementor-default elementor-template-canvas elementor-kit-424 elementor-page elementor-page-121362 e--ua-blink e--ua-chrome e--ua-mac e--ua-webkit">
-    <!-- Google Tag Manager (noscript) -->
-    <!-- <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJJXVQC" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript> -->
-
-    <!-- End Google Tag Manager (noscript) -->
     <div data-elementor-type="wp-page" data-elementor-id="121362" class="elementor elementor-121362"
         data-elementor-settings="{&quot;element_pack_global_tooltip_width&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;element_pack_global_tooltip_width_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;element_pack_global_tooltip_width_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;element_pack_global_tooltip_padding&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_padding_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_padding_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_border_radius&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_border_radius_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true},&quot;element_pack_global_tooltip_border_radius_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;top&quot;:&quot;&quot;,&quot;right&quot;:&quot;&quot;,&quot;bottom&quot;:&quot;&quot;,&quot;left&quot;:&quot;&quot;,&quot;isLinked&quot;:true}}"
         data-elementor-post-type="page">
@@ -5506,36 +5493,48 @@
             document.addEventListener(event, lazyloadRunObserver);
         });
 
-        (async () => { 
-            const scriptsData = {
-                'chative-messenger': {
-                    src: 'https://messenger.svc.chative.io/static/v1.0/channels/s6e6bc4db-d809-483a-ae9f-ad846b7c8768/messenger.js?mode=livechat',
-                    id: 'chative-messenger-script',
-                    defer: true,
-                },
-                'goaffpro': {
-                    src: 'https://api.goaffpro.com/loader.js?shop=zfvpjiupxc',
-                    id: 'goaffpro-script',
-                    defer: true,
-                    type: 'text/javascript',
-                },
-            }
-            for (const [key, value] of Object.entries(scriptsData)) {
-                const script = document.createElement('script');
-                script.src = value.src;
-                script.id = value.id;
-                if (value.defer) {
-                    script.defer = true;
+        (async () => {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                const gtmId = 'GTM-MJJXVQC';
+                const scriptsData = {
+                    'gtm': {
+                        src: `https://www.googletagmanager.com/gtm.js?id=${gtmId}`,
+                        id: 'gtm-script',
+                        defer: true,
+                        target: document.head,
+                    },
+                    'chative-messenger': {
+                        src: 'https://messenger.svc.chative.io/static/v1.0/channels/s6e6bc4db-d809-483a-ae9f-ad846b7c8768/messenger.js?mode=livechat',
+                        id: 'chative-messenger-script',
+                        defer: true,
+                        target: document.body,
+                    },
+                    'goaffpro': {
+                        src: 'https://api.goaffpro.com/loader.js?shop=zfvpjiupxc',
+                        id: 'goaffpro-script',
+                        defer: true,
+                        type: 'text/javascript',
+                        target: document.body,
+                    },
                 }
-                if (value.type) {
-                    script.type = value.type;
+                for (const [key, value] of Object.entries(scriptsData)) {
+                    const script = document.createElement('script');
+                    script.src = value.src;
+                    script.id = value.id;
+                    if (value.defer) {
+                        script.defer = true;
+                    }
+                    if (value.type) {
+                        script.type = value.type;
+                    }
+                    value.target.appendChild(script);
                 }
-                document.body.appendChild(script);
-            }
-        })()
+            })()
     </script>
-  <!--   <script src="https://messenger.svc.chative.io/static/v1.0/channels/s6e6bc4db-d809-483a-ae9f-ad846b7c8768/messenger.js?mode=livechat" defer></script>
-    <script id="goaffpro-script" defer type="text/javascript" src="https://api.goaffpro.com/loader.js?shop=zfvpjiupxc"></script> -->
 </body>
 
 </html>
