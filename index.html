@@ -5492,7 +5492,7 @@
             document.addEventListener(event, lazyloadRunObserver);
         });
 
-        /* (async () => {
+        (async () => {
                 window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({
                     'gtm.start': new Date().getTime(),
@@ -5533,9 +5533,9 @@
                     }
                     setTimeout(() => {
                         value.target.appendChild(script);
-                    }, 2000);
+                    }, 500);
                 }
-            })() */
+            })()
     </script>
 </body>
 
