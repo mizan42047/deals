@@ -5505,9 +5505,37 @@
         events.forEach((event) => {
             document.addEventListener(event, lazyloadRunObserver);
         });
+
+        (async () => { 
+            const scriptsData = {
+                'chative-messenger': {
+                    src: 'https://messenger.svc.chative.io/static/v1.0/channels/s6e6bc4db-d809-483a-ae9f-ad846b7c8768/messenger.js?mode=livechat',
+                    id: 'chative-messenger-script',
+                    defer: true,
+                },
+                'goaffpro': {
+                    src: 'https://api.goaffpro.com/loader.js?shop=zfvpjiupxc',
+                    id: 'goaffpro-script',
+                    defer: true,
+                    type: 'text/javascript',
+                },
+            }
+            for (const [key, value] of Object.entries(scriptsData)) {
+                const script = document.createElement('script');
+                script.src = value.src;
+                script.id = value.id;
+                if (value.defer) {
+                    script.defer = true;
+                }
+                if (value.type) {
+                    script.type = value.type;
+                }
+                document.body.appendChild(script);
+            }
+        })()
     </script>
-    <script src="https://messenger.svc.chative.io/static/v1.0/channels/s6e6bc4db-d809-483a-ae9f-ad846b7c8768/messenger.js?mode=livechat" defer></script>
-    <script id="goaffpro-script" defer type="text/javascript" src="https://api.goaffpro.com/loader.js?shop=zfvpjiupxc"></script>
+  <!--   <script src="https://messenger.svc.chative.io/static/v1.0/channels/s6e6bc4db-d809-483a-ae9f-ad846b7c8768/messenger.js?mode=livechat" defer></script>
+    <script id="goaffpro-script" defer type="text/javascript" src="https://api.goaffpro.com/loader.js?shop=zfvpjiupxc"></script> -->
 </body>
 
 </html>
