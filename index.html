@@ -12,7 +12,8 @@
     <meta name="theme-color" content="#312c48">
     <meta name="msapplication-navbutton-color" content="#312c48">
 
-    <link rel="stylesheet" href="./assets/css/merged.css">
+    <link rel="preload" as="style" href="./assets/css/merged.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./assets/css/merged.css"></noscript>
     <meta name="description" content="BdThemes offers limited-time WordPress Black Friday deals and Cyber Monday discounts, allowing you to save big and shop more in 2025.">
     <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
     <link rel="canonical" href="https://bdthemes.com/deals/">
@@ -5521,6 +5522,7 @@
                         target: document.body,
                     },
                 }
+                
                 for (const [key, value] of Object.entries(scriptsData)) {
                     const script = document.createElement('script');
                     script.src = value.src;
