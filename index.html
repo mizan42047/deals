@@ -11,7 +11,7 @@
     <meta name="msapplication-TileImage" content="https://bdthemes.com/wp-content/uploads/2021/09/cropped-bdthemes-favicon-512x512-1-270x270.png">
     <meta name="theme-color" content="#312c48">
     <meta name="msapplication-navbutton-color" content="#312c48">
-    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/merged.css"> -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/merged.css">
     <meta name="description" content="BdThemes offers limited-time WordPress Black Friday deals and Cyber Monday discounts, allowing you to save big and shop more in 2025.">
     <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
     <link rel="canonical" href="https://bdthemes.com/deals/">
@@ -5492,69 +5492,50 @@
             document.addEventListener(event, lazyloadRunObserver);
         });
 
-        (function () {
-            // --- 1. Init DataLayer early (same as GTM requirement) ---
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-
-            // --- 2. Third party scripts config ---
-            const gtmId = 'GTM-MJJXVQC';
-
-            const SCRIPTS = [
-                {
-                    id: 'gtm-script',
-                    src: `https://www.googletagmanager.com/gtm.js?id=${gtmId}`,
-                    target: document.head,
-                },
-                {
-                    id: 'chative-messenger-script',
-                    src: 'https://messenger.svc.chative.io/static/v1.0/channels/s6e6bc4db-d809-483a-ae9f-ad846b7c8768/messenger.js?mode=livechat',
-                    target: document.body,
-                },
-                {
-                    id: 'goaffpro-script',
-                    src: 'https://api.goaffpro.com/loader.js?shop=zfvpjiupxc',
-                    target: document.body,
+        (async () => {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                const gtmId = 'GTM-MJJXVQC';
+                const scriptsData = {
+                    'gtm': {
+                        src: `https://www.googletagmanager.com/gtm.js?id=${gtmId}`,
+                        id: 'gtm-script',
+                        defer: true,
+                        target: document.head,
+                    },
+                    'chative-messenger': {
+                        src: 'https://messenger.svc.chative.io/static/v1.0/channels/s6e6bc4db-d809-483a-ae9f-ad846b7c8768/messenger.js?mode=livechat',
+                        id: 'chative-messenger-script',
+                        defer: true,
+                        target: document.body,
+                    },
+                    'goaffpro': {
+                        src: 'https://api.goaffpro.com/loader.js?shop=zfvpjiupxc',
+                        id: 'goaffpro-script',
+                        defer: true,
+                        type: 'text/javascript',
+                        target: document.body,
+                    },
                 }
-            ];
-
-            // --- 3. Inject script helper ---
-            function injectScript(item) {
-                if (document.getElementById(item.id)) return;
-
-                const s = document.createElement('script');
-                s.src = item.src;
-                s.id = item.id;
-                s.async = true; // async is always better for 3rd-party scripts
-                item.target.appendChild(s);
-            }
-
-            // --- 4. Load all third-party scripts ---
-            function loadAll() {
-                if (window.__3p_loaded) return;
-                window.__3p_loaded = true;
-
-                SCRIPTS.forEach(injectScript);
-            }
-
-            // --- 5. Loading strategy ---
-            // Preferred: browser idle time
-            if ('requestIdleCallback' in window) {
-                requestIdleCallback(loadAll, { timeout: 2500 });
-            }
-
-            // Fallback: run after 2.5s idle timeout
-            setTimeout(loadAll, 2500);
-
-            // Fallback 2: load immediately on first user interaction
-            ['click', 'touchstart', 'keydown', 'scroll', 'pointerdown'].forEach(evt => {
-                window.addEventListener(evt, loadAll, { once: true, passive: true });
-            });
-
-        })();
+                
+                for (const [key, value] of Object.entries(scriptsData)) {
+                    const script = document.createElement('script');
+                    script.src = value.src;
+                    script.id = value.id;
+                    if (value.defer) {
+                        script.defer = true;
+                    }
+                    if (value.type) {
+                        script.type = value.type;
+                    }
+                    setTimeout(() => {
+                        value.target.appendChild(script);
+                    }, 10000);
+                }
+            })()
     </script>
 </body>
 
