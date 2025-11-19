@@ -5491,60 +5491,79 @@
         events.forEach((event) => {
             document.addEventListener(event, lazyloadRunObserver);
         });
-
+    </script>
+    <script>
         (function () {
 
-            // Early GTM requirement
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-MJJXVQC');
 
-            const gtmId = 'GTM-MJJXVQC';
 
-            const SCRIPTS = [
-                {
-                    id: 'gtm-script',
-                    src: `https://www.googletagmanager.com/gtm.js?id=${gtmId}`,
-                    target: document.head,
-                },
+            function loadHeavyGTM() {
+                if (window.__heavy_gtm_loaded) return;
+                window.__heavy_gtm_loaded = true;
+
+                // Tell GTM container to fire delayed tags
+                window.dataLayer.push({ event: "gtm.load_heavy_tags" });
+            }
+
+            const gtmEvents = ['click', 'touchstart', 'scroll', 'keydown', 'mousemove'];
+            gtmEvents.forEach(evt =>
+                window.addEventListener(evt, loadHeavyGTM, { once: true, passive: true })
+            );
+
+            // Backup fallback (just in case user never interacts)
+            setTimeout(loadHeavyGTM, 5000);
+
+
+            const THIRD_PARTY_SCRIPTS = [
                 {
                     id: 'chative-messenger-script',
                     src: 'https://messenger.svc.chative.io/static/v1.0/channels/s6e6bc4db-d809-483a-ae9f-ad846b7c8768/messenger.js?mode=livechat',
-                    target: document.body,
+                    target: document.body
                 },
                 {
                     id: 'goaffpro-script',
                     src: 'https://api.goaffpro.com/loader.js?shop=zfvpjiupxc',
-                    target: document.body,
+                    target: document.body
                 }
             ];
 
             function injectScript(item) {
                 if (document.getElementById(item.id)) return;
                 const s = document.createElement('script');
-                s.src = item.src;
                 s.id = item.id;
+                s.src = item.src;
                 s.async = true;
                 item.target.appendChild(s);
             }
 
-            // Load ALL scripts
-            function loadScripts() {
-                if (window.__scripts_loaded) return;
-                window.__scripts_loaded = true;
-                SCRIPTS.forEach(injectScript);
+            function loadThirdPartyScripts() {
+                if (window.__third_party_loaded) return;
+                window.__third_party_loaded = true;
+
+                THIRD_PARTY_SCRIPTS.forEach(injectScript);
             }
 
-            // Load only when user interacts
-            const events = ['click', 'touchstart', 'mousemove', 'scroll', 'keydown'];
-            events.forEach(evt => {
-                window.addEventListener(evt, loadScripts, { once: true, passive: true });
-            });
+            const thirdPartyEvents = ['click', 'touchstart', 'scroll', 'keydown', 'mousemove'];
+            thirdPartyEvents.forEach(evt =>
+                window.addEventListener(evt, loadThirdPartyScripts, { once: true, passive: true })
+            );
+
+            // Backup timeout (never rely only on interaction)
+            setTimeout(loadThirdPartyScripts, 5000);
 
         })();
     </script>
+
 </body>
 
 </html>
