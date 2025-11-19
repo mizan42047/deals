@@ -5492,50 +5492,58 @@
             document.addEventListener(event, lazyloadRunObserver);
         });
 
-        (async () => {
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    'gtm.start': new Date().getTime(),
-                    event: 'gtm.js'
-                });
-                const gtmId = 'GTM-MJJXVQC';
-                const scriptsData = {
-                    'gtm': {
-                        src: `https://www.googletagmanager.com/gtm.js?id=${gtmId}`,
-                        id: 'gtm-script',
-                        defer: true,
-                        target: document.head,
-                    },
-                    'chative-messenger': {
-                        src: 'https://messenger.svc.chative.io/static/v1.0/channels/s6e6bc4db-d809-483a-ae9f-ad846b7c8768/messenger.js?mode=livechat',
-                        id: 'chative-messenger-script',
-                        defer: true,
-                        target: document.body,
-                    },
-                    'goaffpro': {
-                        src: 'https://api.goaffpro.com/loader.js?shop=zfvpjiupxc',
-                        id: 'goaffpro-script',
-                        defer: true,
-                        type: 'text/javascript',
-                        target: document.body,
-                    },
+        (function () {
+
+            // Early GTM requirement
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+
+            const gtmId = 'GTM-MJJXVQC';
+
+            const SCRIPTS = [
+                {
+                    id: 'gtm-script',
+                    src: `https://www.googletagmanager.com/gtm.js?id=${gtmId}`,
+                    target: document.head,
+                },
+                {
+                    id: 'chative-messenger-script',
+                    src: 'https://messenger.svc.chative.io/static/v1.0/channels/s6e6bc4db-d809-483a-ae9f-ad846b7c8768/messenger.js?mode=livechat',
+                    target: document.body,
+                },
+                {
+                    id: 'goaffpro-script',
+                    src: 'https://api.goaffpro.com/loader.js?shop=zfvpjiupxc',
+                    target: document.body,
                 }
-                
-                for (const [key, value] of Object.entries(scriptsData)) {
-                    const script = document.createElement('script');
-                    script.src = value.src;
-                    script.id = value.id;
-                    if (value.defer) {
-                        script.defer = true;
-                    }
-                    if (value.type) {
-                        script.type = value.type;
-                    }
-                    setTimeout(() => {
-                        value.target.appendChild(script);
-                    }, 10000);
-                }
-            })()
+            ];
+
+            function injectScript(item) {
+                if (document.getElementById(item.id)) return;
+                const s = document.createElement('script');
+                s.src = item.src;
+                s.id = item.id;
+                s.async = true;
+                item.target.appendChild(s);
+            }
+
+            // Load ALL scripts
+            function loadScripts() {
+                if (window.__scripts_loaded) return;
+                window.__scripts_loaded = true;
+                SCRIPTS.forEach(injectScript);
+            }
+
+            // Load only when user interacts
+            const events = ['click', 'touchstart', 'mousemove', 'scroll', 'keydown'];
+            events.forEach(evt => {
+                window.addEventListener(evt, loadScripts, { once: true, passive: true });
+            });
+
+        })();
     </script>
 </body>
 
